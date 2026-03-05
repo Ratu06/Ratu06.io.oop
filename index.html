@@ -43,15 +43,50 @@
 
     .card h2 {
       color: #bfdbfe;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
-    iframe {
-      width: 100%;
-      height: 500px;
+    /* Gaya untuk blok kode */
+    pre {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9em;
+      font-family: 'Courier New', monospace;
+      margin: 15px 0;
+      border: 1px solid #334155;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .btn-preview {
+      background: #3b82f6;
+      color: white;
       border: none;
-      border-radius: 12px;
-      background: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: 500;
+      transition: background 0.3s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      margin-top: 5px;
+    }
+
+    .btn-preview:hover {
+      background: #2563eb;
+      transform: translateY(-1px);
+    }
+
+    .btn-preview:active {
+      transform: translateY(0);
     }
 
     footer {
@@ -59,6 +94,71 @@
       padding: 20px;
       color: #c7d2fe;
       font-size: 0.9em;
+    }
+
+    /* Modal (popup) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 1000px;
+      height: 85%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      color: #1e293b;
+    }
+
+    .modal-header h3 {
+      margin: 0;
+      font-size: 1.3em;
+    }
+
+    .close {
+      font-size: 32px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #64748b;
+      line-height: 1;
+      transition: color 0.2s;
+    }
+
+    .close:hover {
+      color: #0f172a;
+    }
+
+    .modal-body {
+      flex: 1;
+      min-height: 0;
+    }
+
+    .modal-body iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+      background: #f8fafc;
     }
   </style>
 </head>
@@ -72,47 +172,416 @@
 </header>
 
 <div class="container">
-
+  <!-- Program 1 -->
   <div class="card">
     <h2>Program 1</h2>
-    <iframe src="https://dartpad.dev/?id=158fdd7b81ab9c5e8b27e104c2f5d4bf"></iframe>
+     <p>Pengertian OOP</p>
+     <p>OOP adalah paradigma pemrograman yang menyusun program sebagai 
+      kumpulan objek yang dibuat dari class (cetakan objek).</p>
+    <!-- Kode Dart ditampilkan di atas tombol -->
+    <pre><code>// Nama   : Ratu klarisa
+// Nim    : 251410010
+// Kelas  : Si2A
+
+class Car {
+  String? model;
+  String? color;
+  void start() {
+    print('Car started!');
+  }
+  void stop() {
+    print('Car stopped!');
+  }
+}
+void main() {
+  Car myCar = Car();
+  
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
+  myCar.start();
+  myCar.stop();
+}</code></pre>
+    <button class="btn-preview" data-src="https://dartpad.dev/?id=158fdd7b81ab9c5e8b27e104c2f5d4bf">Lihat Program</button>
   </div>
 
+  <!-- Program 2 -->
   <div class="card">
     <h2>Program 2</h2>
-    <iframe src="https://dartpad.dev/?id=d4c4a1ad91512e6055e6248df91bebc1"></iframe>
+    <p>Konsep dasar OOP</p>
+    <p> Encapsulation → menggabungkan data dan method dalam satu objek</p>
+    <p> Inheritance→ pewarisan sifat dari class lain</p>
+    <p> Polymorphism → satu method bisa punya banyak bentuk</p>
+    <p>Abstraction → menyembunyikan detail, menampilkan yang penting saja</p>
+    <pre><code>// Nama   : Ratu klarisa
+// Nim    : 251410010
+// Kelas  : Si2A
+
+class Car {
+  String? model;
+  String? color;
+  void start() {
+    print('Car started!');
+  }
+  void stop() {
+    print('Car stopped!');
+  }
+}
+void main() {
+  Car myCar = Car();
+  
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
+  myCar.start();
+  myCar.stop();
+}</code></pre>
+    <button class="btn-preview" data-src="https://dartpad.dev/?id=d4c4a1ad91512e6055e6248df91bebc1">Lihat Program</button>
   </div>
 
+  <!-- Program 3 -->
   <div class="card">
     <h2>Program 3</h2>
-    <iframe src="https://dartpad.dev/?id=f0845de80a4d0197a9c96b43eccb33ef"></iframe>
+     <p> Class sederhana adalah sebuah cetakan (blueprint) paling dasar dalam OOP yang digunakan untuk membuat objek,
+       berisi atribut (data) dan bisa juga method (fungsi) tanpa struktur yang rumit.</p>
+    <pre><code>// Nama   : Ratu klarisa
+// Nim    : 251410010
+// Kelas  : Si2A
+
+class Car {
+  String? model;
+  String? color;
+  
+    car(this.model, this.color);
+
+    void start(){
+      print('Engine Online:$model');
+    }
+  }
+  void stop() {
+    print('Car stopped!');
+  }
+}
+void main() {
+  Car myCar = Car("Sedan","Merah");
+
+  myCar.start();
+  print(mycar,color);
+}
+}</code></pre>
+    <button class="btn-preview" data-src="https://dartpad.dev/?id=f0845de80a4d0197a9c96b43eccb33ef">Lihat Program</button>
   </div>
 
+  <!-- Program 4 -->
   <div class="card">
     <h2>Program 4</h2>
-    <iframe src="https://dartpad.dev/?id=a6924ba5a2e2bd0ad3bb8bdaff197742"></iframe>
+     <p>Objek instatiation</p>
+      <p> Proses pembuatan sebuah objek nyata dari class Car yang sudah
+         dibuat sebelumnya dilakukan di dalam fungsi main().</p>
+    <pre><code>// Nama   : Ratu klarisa
+// Nim    : 251410010
+// Kelas  : Si2A
+
+class Car {
+  String? model;
+  String? color;
+  void start() {
+    print('Car started!');
+  }
+  void stop() {
+    print('Car stopped!');
+  }
+}
+void main() {
+  Car myCar = Car();
+  
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
+  myCar.start();
+  myCar.stop();
+}</code></pre>
+    <button class="btn-preview" data-src="https://dartpad.dev/?id=a6924ba5a2e2bd0ad3bb8bdaff197742">Lihat Program</button>
   </div>
 
+  <!-- Program 5 -->
   <div class="card">
     <h2>Program 5</h2>
-    <iframe src="https://dartpad.dev/?id=b773b46f6e297438ead73afe1b79eb39"></iframe>
+    <p>constructor</p>
+    <p> Constructor membantu memberikan nilai awal pada atribut ketika sebuah objek dibuat.</p>
+    <pre><code>// Nama   : Ratu klarisa
+// Nim    : 251410010
+// Kelas  : Si2A
+
+class Car {
+  String? model;
+  String? color;
+  void start() {
+    print('Car started!');
+  }
+  void stop() {
+    print('Car stopped!');
+  }
+}
+void main() {
+  Car myCar = Car();
+  
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
+  myCar.start();
+  myCar.stop();
+}</code></pre>
+    <button class="btn-preview" data-src="https://dartpad.dev/?id=b773b46f6e297438ead73afe1b79eb39">Lihat Program</button>
   </div>
 
+  <!-- Program 6 -->
   <div class="card">
     <h2>Program 6</h2>
-    <iframe src="https://dartpad.dev/?id=56246cacba0a9dffbbe48492248ea543"></iframe>
+    <p> Practice: Mahasiswa</p>
+  <p> Penerapan objek Mahasiswa digunakan untuk 
+    mengatur dan menyimpan data akademik secara terorganisir.</p>
+    <pre><code>// Nama   : Ratu klarisa
+// Nim    : 251410010
+// Kelas  : Si2A
+
+class Car {
+  String? model;
+  String? color;
+  void start() {
+    print('Car started!');
+  }
+  void stop() {
+    print('Car stopped!');
+  }
+}
+void main() {
+  Car myCar = Car();
+  
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
+  myCar.start();
+  myCar.stop();
+}</code></pre>
+    <button class="btn-preview" data-src="https://dartpad.dev/?id=56246cacba0a9dffbbe48492248ea543">Lihat Program</button>
   </div>
 
-  <div class="card">
+    <div class="card">
     <h2>Program 7</h2>
-    <iframe src="https://dartpad.dev/?id=730fb4e1e24720ffe14d4808069242a6"></iframe>
+    <p>  Encapsulation</p>
+    <p>  Metode perlindungan data dilakukan dengan membatasi akses 
+      langsung ke variabel internal melalui penggunaan awalan underscore (_).</p>
+    <pre><code>// Nama   : Ratu klarisa
+// Nim    : 251410010
+// Kelas  : Si2A
+
+class Car {
+  String? model;
+  String? color;
+  void start() {
+    print('Car started!');
+  }
+  void stop() {
+    print('Car stopped!');
+  }
+}
+void main() {
+  Car myCar = Car();
+  
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
+  myCar.start();
+  myCar.stop();
+}</code></pre>
+    <button class="btn-preview" data-src="https://dartpad.dev/?id=730fb4e1e24720ffe14d4808069242a6">Lihat Program</button>
   </div>
 
+    <div class="card">
+    <h2>Program 8</h2>
+    <p>  This keyword</p>
+    <p> Rujukan eksplisit ke instance class saat ini 
+      untuk menghindari kebingungan nama antara field dan parameter.</p>
+    <pre><code>// Nama   : Ratu klarisa
+// Nim    : 251410010
+// Kelas  : Si2A
+
+class Car {
+  String? model;
+  String? color;
+  void start() {
+    print('Car started!');
+  }
+  void stop() {
+    print('Car stopped!');
+  }
+}
+void main() {
+  Car myCar = Car();
+  
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
+  myCar.start();
+  myCar.stop();
+}</code></pre>
+    <button class="btn-preview" data-src="https://dartpad.dev/?id=730fb4e1e24720ffe14d4808069242a6">Lihat Program</button>
+  </div>
+
+    <div class="card">
+    <h2>Program 9</h2>
+    <p>  Product Class</p>
+    <p>  Penggunaan Named Parameters dan Required untuk 
+      menciptakan objek yang lebih deskriptif dan aman.</p>
+    <pre><code>// Nama   : Ratu klarisa
+// Nim    : 251410010
+// Kelas  : Si2A
+
+class Car {
+  String? model;
+  String? color;
+  void start() {
+    print('Car started!');
+  }
+  void stop() {
+    print('Car stopped!');
+  }
+}
+void main() {
+  Car myCar = Car();
+  
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
+  myCar.start();
+  myCar.stop();
+}</code></pre>
+    <button class="btn-preview" data-src="https://dartpad.dev/?id=730fb4e1e24720ffe14d4808069242a6">Lihat Program</button>
+  </div>
+
+    <div class="card">
+    <h2>Program 10</h2>
+    <p>   Kesimpulan</p>
+    <p> Pemrograman Berorientasi Objek di Dart memberikan fondasi yang kuat 
+      untuk membangun aplikasi yang bersih, modular, dan siap dikembangkan lebih jauh.</p>
+    <pre><code>// Nama   : Ratu klarisa
+// Nim    : 251410010
+// Kelas  : Si2A
+
+class Car {
+  String? model;
+  String? color;
+  void start() {
+    print('Car started!');
+  }
+  void stop() {
+    print('Car stopped!');
+  }
+}
+void main() {
+  Car myCar = Car();
+  
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
+  myCar.start();
+  myCar.stop();
+}</code></pre>
+    <button class="btn-preview" data-src="https://dartpad.dev/?id=730fb4e1e24720ffe14d4808069242a6">Lihat Program</button>
+  </div>
+
+    <div class="card">
+    <h2>Program 11</h2>
+    <p> Bonus anjing class</p>
+    <p>Contoh tambahan penggunaan class untuk memodelkan makhluk hidup 
+      seperti anjing dengan method dipanggil untuk mendapatkan output ke layar. </p>
+    <pre><code>// Nama   : Ratu klarisa
+// Nim    : 251410010
+// Kelas  : Si2A
+
+class Car {
+  String? model;
+  String? color;
+  void start() {
+    print('Car started!');
+  }
+  void stop() {
+    print('Car stopped!');
+  }
+}
+void main() {
+  Car myCar = Car();
+  
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
+  myCar.start();
+  myCar.stop();
+}</code></pre>
+    <button class="btn-preview" data-src="https://dartpad.dev/?id=730fb4e1e24720ffe14d4808069242a6">Lihat Program</button>
+  </div>
+</div>
+
+<!-- Modal Popup untuk iframe -->
+<div id="iframeModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 id="modalTitle">Program</h3>
+      <span class="close" id="closeModal">&times;</span>
+    </div>
+    <div class="modal-body">
+      <iframe id="modalIframe" src="" title="Program Preview"></iframe>
+    </div>
+  </div>
 </div>
 
 <footer>
   © 2026 Laporan OOP Dart • GitHub Pages
 </footer>
+
+<script>
+  (function() {
+    // Ambil elemen modal, iframe, tombol close
+    const modal = document.getElementById('iframeModal');
+    const modalIframe = document.getElementById('modalIframe');
+    const closeBtn = document.getElementById('closeModal');
+    const modalTitle = document.getElementById('modalTitle');
+
+    // Ambil semua tombol preview
+    const previewButtons = document.querySelectorAll('.btn-preview');
+
+    // Fungsi untuk membuka modal dengan src tertentu
+    function openModal(src, programName) {
+      modalIframe.src = src;
+      modalTitle.textContent = programName;
+      modal.style.display = 'flex';
+    }
+
+    // Fungsi menutup modal
+    function closeModal() {
+      modal.style.display = 'none';
+      modalIframe.src = '';
+    }
+
+    // Tambahkan event listener ke setiap tombol
+    previewButtons.forEach((btn, index) => {
+      btn.addEventListener('click', function() {
+        const src = this.dataset.src;
+        // Ambil judul program dari elemen h2 dalam card yang sama
+        const programName = this.closest('.card').querySelector('h2').textContent;
+        openModal(src, programName);
+      });
+    });
+
+    // Klik tombol close
+    closeBtn.addEventListener('click', closeModal);
+
+    // Klik di luar konten modal menutup modal
+    modal.addEventListener('click', function(event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Tekan ESC menutup modal
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && modal.style.display === 'flex') {
+        closeModal();
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
