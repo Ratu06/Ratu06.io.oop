@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -179,30 +179,8 @@
      <p>OOP adalah paradigma pemrograman yang menyusun program sebagai 
       kumpulan objek yang dibuat dari class (cetakan objek).</p>
     <!-- Kode Dart ditampilkan di atas tombol -->
-    <pre><code>// Nama   : Ratu klarisa
-// Nim    : 251410010
-// Kelas  : Si2A
-
-class Car {
-  String? model;
-  String? color;
-  void start() {
-    print('Car started!');
-  }
-  void stop() {
-    print('Car stopped!');
-  }
-}
-void main() {
-  Car myCar = Car();
-  
-  myCar.model = "Sedan";
-  myCar.color = "Merah";
-  myCar.start();
-  myCar.stop();
-}</code></pre>
-    <button class="btn-preview" data-src="https://dartpad.dev/?id=158fdd7b81ab9c5e8b27e104c2f5d4bf">Lihat Program</button>
-  </div>
+   
+     </div>
 
   <!-- Program 2 -->
   <div class="card">
@@ -212,30 +190,7 @@ void main() {
     <p> Inheritance→ pewarisan sifat dari class lain</p>
     <p> Polymorphism → satu method bisa punya banyak bentuk</p>
     <p>Abstraction → menyembunyikan detail, menampilkan yang penting saja</p>
-    <pre><code>// Nama   : Ratu klarisa
-// Nim    : 251410010
-// Kelas  : Si2A
-
-class Car {
-  String? model;
-  String? color;
-  void start() {
-    print('Car started!');
-  }
-  void stop() {
-    print('Car stopped!');
-  }
-}
-void main() {
-  Car myCar = Car();
-  
-  myCar.model = "Sedan";
-  myCar.color = "Merah";
-  myCar.start();
-  myCar.stop();
-}</code></pre>
-    <button class="btn-preview" data-src="https://dartpad.dev/?id=d4c4a1ad91512e6055e6248df91bebc1">Lihat Program</button>
-  </div>
+    </div>
 
   <!-- Program 3 -->
   <div class="card">
@@ -249,24 +204,22 @@ void main() {
 class Car {
   String? model;
   String? color;
-  
-    car(this.model, this.color);
-
-    void start(){
-      print('Engine Online:$model');
+  void start(){
+      print('Car started!');
+    }
+    void stop() {
+      print('Car stopped!');
     }
   }
-  void stop() {
-    print('Car stopped!');
-  }
-}
-void main() {
-  Car myCar = Car("Sedan","Merah");
+  void main() {
+    Car myCar = Car();
 
-  myCar.start();
-  print(mycar,color);
-}
-}</code></pre>
+    myCar.model = "Sedan";
+    myCar.color = "Merah";
+    myCar.start();
+    myCar.stop();
+  }
+</code></pre>
     <button class="btn-preview" data-src="https://dartpad.dev/?id=f0845de80a4d0197a9c96b43eccb33ef">Lihat Program</button>
   </div>
 
@@ -283,21 +236,17 @@ void main() {
 class Car {
   String? model;
   String? color;
-  void start() {
-    print('Car started!');
-  }
-  void stop() {
-    print('Car stopped!');
-  }
 }
 void main() {
-  Car myCar = Car();
+    Car myCar = Car();
   
-  myCar.model = "Sedan";
-  myCar.color = "Merah";
-  myCar.start();
-  myCar.stop();
-}</code></pre>
+    myCar.model = "Sedan";
+    myCar.Color = "Merah";
+
+    print(myCar.model);
+    print(myCar.color);
+  }
+</code></pre>
     <button class="btn-preview" data-src="https://dartpad.dev/?id=a6924ba5a2e2bd0ad3bb8bdaff197742">Lihat Program</button>
   </div>
 
@@ -313,21 +262,22 @@ void main() {
 class Car {
   String? model;
   String? color;
-  void start() {
-    print('Car started!');
-  }
-  void stop() {
-    print('Car stopped!');
+   
+  Car(this.model,this.color);
+
+  void start(){
+    print('Engine Online: $model');
   }
 }
+
 void main() {
-  Car myCar = Car();
-  
-  myCar.model = "Sedan";
-  myCar.color = "Merah";
+  Car myCar =
+  Car ("Sedan","Merah");
+
   myCar.start();
-  myCar.stop();
-}</code></pre>
+  print(myCar.color);
+}
+</code></pre>
     <button class="btn-preview" data-src="https://dartpad.dev/?id=b773b46f6e297438ead73afe1b79eb39">Lihat Program</button>
   </div>
 
@@ -341,24 +291,21 @@ void main() {
 // Nim    : 251410010
 // Kelas  : Si2A
 
-class Car {
-  String? model;
-  String? color;
-  void start() {
-    print('Car started!');
-  }
-  void stop() {
-    print('Car stopped!');
+class Mahasiswa {
+  String nama;
+  String nim;
+  double ipk;
+
+  Mahasiswa(this.nama,this.nim,this.ipk);
+
+  void tampilkanData()
+  {
+    print('Nama : $nama');
+    print('NIM : $nim');
+    print('IPK : $ipk');
   }
 }
-void main() {
-  Car myCar = Car();
-  
-  myCar.model = "Sedan";
-  myCar.color = "Merah";
-  myCar.start();
-  myCar.stop();
-}</code></pre>
+</code></pre>
     <button class="btn-preview" data-src="https://dartpad.dev/?id=56246cacba0a9dffbbe48492248ea543">Lihat Program</button>
   </div>
 
@@ -371,24 +318,27 @@ void main() {
 // Nim    : 251410010
 // Kelas  : Si2A
 
-class Car {
-  String? model;
-  String? color;
-  void start() {
-    print('Car started!');
-  }
-  void stop() {
-    print('Car stopped!');
-  }
+class Person {
+  String _name;
+  int age;
+
+  Person(this._name,this.age);
+
+  void setName(String name) => _name = name;
+
+  String getName() => _name;
 }
-void main() {
-  Car myCar = Car();
-  
-  myCar.model = "Sedan";
-  myCar.color = "Merah";
-  myCar.start();
-  myCar.stop();
-}</code></pre>
+
+void main(){
+  Person person =
+  Person("Ratu Klarisa",19);
+
+  print(person.age);
+  person.setName("Ratu Klarisa");
+
+  print(person.getName());
+}
+</code></pre>
     <button class="btn-preview" data-src="https://dartpad.dev/?id=730fb4e1e24720ffe14d4808069242a6">Lihat Program</button>
   </div>
 
@@ -401,24 +351,17 @@ void main() {
 // Nim    : 251410010
 // Kelas  : Si2A
 
-class Car {
-  String? model;
-  String? color;
-  void start() {
-    print('Car started!');
-  }
-  void stop() {
-    print('Car stopped!');
-  }
+class  Product {
+  String nama;
+  Product(this.nama);
 }
+
 void main() {
-  Car myCar = Car();
-  
-  myCar.model = "Sedan";
-  myCar.color = "Merah";
-  myCar.start();
-  myCar.stop();
-}</code></pre>
+  Produk produk1 =
+  Produk ("Laptop Gaming");
+   print(produk1.nama);
+}
+</code></pre>
     <button class="btn-preview" data-src="https://dartpad.dev/?id=730fb4e1e24720ffe14d4808069242a6">Lihat Program</button>
   </div>
 
@@ -431,24 +374,45 @@ void main() {
 // Nim    : 251410010
 // Kelas  : Si2A
 
-class Car {
-  String? model;
-  String? color;
-  void start() {
-    print('Car started!');
-  }
-  void stop() {
-    print('Car stopped!');
-  }
+class Produk {
+  final String id, nama;
+  final double harga;
+  final int stok;
+  final string kategori;
+
+  Produk({
+    required this.id,required this.nama,required this.harga,this.stok = 0
+    this.kategori = 'Umum',
+  })
 }
+
 void main() {
-  Car myCar = Car();
+  Produk laptop = Produk(
+    id: "P001"
+    nama: "Laptop Gaming",
+    harga: 15000000,
+    stok: 15,
+    kategori: "Elektronik",
+  );
+
+  Produk smartphone = Produk(
+    id: "P002",
+    nama: "Smartphone Flagship",
+    harga: 12000000,
+    stok: 25,
+  );
   
-  myCar.model = "Sedan";
-  myCar.color = "Merah";
-  myCar.start();
-  myCar.stop();
-}</code></pre>
+  Produk kamera = Produk(
+    id: "P003",
+    nama: "Kamera Mirrorles",
+    harga: 20000000,
+  );
+
+  print(laptop.nama);
+  print(smartphone.nama);
+  print(kamera.nama);
+}
+</code></pre>
     <button class="btn-preview" data-src="https://dartpad.dev/?id=730fb4e1e24720ffe14d4808069242a6">Lihat Program</button>
   </div>
 
@@ -457,29 +421,6 @@ void main() {
     <p>   Kesimpulan</p>
     <p> Pemrograman Berorientasi Objek di Dart memberikan fondasi yang kuat 
       untuk membangun aplikasi yang bersih, modular, dan siap dikembangkan lebih jauh.</p>
-    <pre><code>// Nama   : Ratu klarisa
-// Nim    : 251410010
-// Kelas  : Si2A
-
-class Car {
-  String? model;
-  String? color;
-  void start() {
-    print('Car started!');
-  }
-  void stop() {
-    print('Car stopped!');
-  }
-}
-void main() {
-  Car myCar = Car();
-  
-  myCar.model = "Sedan";
-  myCar.color = "Merah";
-  myCar.start();
-  myCar.stop();
-}</code></pre>
-    <button class="btn-preview" data-src="https://dartpad.dev/?id=730fb4e1e24720ffe14d4808069242a6">Lihat Program</button>
   </div>
 
     <div class="card">
@@ -491,24 +432,23 @@ void main() {
 // Nim    : 251410010
 // Kelas  : Si2A
 
-class Car {
-  String? model;
-  String? color;
-  void start() {
-    print('Car started!');
-  }
-  void stop() {
-    print('Car stopped!');
+class Hewan {
+  String nama;
+
+  Hewan(this.nama);
+
+  void bersuara() {
+    print("$nama sedang bersuara.....");
   }
 }
-void main() {
-  Car myCar = Car();
-  
-  myCar.model = "Sedan";
-  myCar.color = "Merah";
-  myCar.start();
-  myCar.stop();
-}</code></pre>
+
+  void main () {
+    var hewan = Hewan("Anjing");
+
+    print("Nama Hewan: ${hewan.nama}");
+    hewan.bersuara();
+  }
+</code></pre>
     <button class="btn-preview" data-src="https://dartpad.dev/?id=730fb4e1e24720ffe14d4808069242a6">Lihat Program</button>
   </div>
 </div>
