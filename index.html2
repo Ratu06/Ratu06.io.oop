@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Materi Sesi 3 OOP Dart</title>
+
+<style>
+
+body{
+font-family:Segoe UI;
+margin:0;
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+color:white;
+}
+
+header{
+text-align:center;
+padding:40px;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+padding:25px;
+border-radius:15px;
+margin-bottom:25px;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+h2{
+color:#93c5fd;
+}
+
+pre{
+background:#1e293b;
+padding:15px;
+border-radius:8px;
+overflow:auto;
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:#cbd5f5;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Resume Materi OOP Dart</h1>
+<p>Nama : Ratu Klarisa</p>
+<p>NIM : 251410010</p>
+<p>Mata Kuliah : Object Oriented Programming</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Resume Materi Sesi 3</h2>
+
+<p>
+Pada sesi ini dibahas mengenai constructor dan encapsulation pada bahasa pemrograman Dart.
+Constructor adalah method khusus yang digunakan untuk melakukan inisialisasi objek saat objek dibuat.
+</p>
+
+<p>
+Dart memiliki beberapa jenis constructor yaitu default constructor, named constructor, parameterized constructor, dan constant constructor.
+Constructor membantu mempermudah proses pemberian nilai awal pada atribut sebuah objek.
+</p>
+
+<p>
+Selain constructor, pada sesi ini juga dipelajari konsep encapsulation.
+Encapsulation adalah teknik untuk menyembunyikan data di dalam class agar tidak dapat diakses langsung dari luar class.
+</p>
+
+<p>
+Dalam Dart, encapsulation dilakukan dengan menggunakan tanda underscore (_) pada variabel sehingga variabel tersebut bersifat private.
+Untuk mengakses data private digunakan getter dan setter.
+</p>
+
+<p>
+Getter digunakan untuk membaca nilai dari variabel private sedangkan setter digunakan untuk mengubah nilai variabel tersebut dengan validasi tertentu.
+</p>
+
+<p>
+Dengan adanya encapsulation, keamanan data lebih terjaga karena akses terhadap data dapat dikontrol melalui method tertentu.
+</p>
+
+</div>
+
+<div class="card">
+<h2>Bonus 2 - Soal 1</h2>
+
+<p>Membuat class RekeningBank dengan method deposit, tarik, dan cek saldo.</p>
+
+<pre>
+class RekeningBank {
+
+  String _nomorRekening;
+  double _saldo;
+
+  RekeningBank(this._nomorRekening,this._saldo);
+
+  void deposit(double jumlah){
+    _saldo += jumlah;
+  }
+
+  void tarik(double jumlah){
+    if(jumlah <= _saldo){
+      _saldo -= jumlah;
+    }else{
+      print("Saldo tidak cukup");
+    }
+  }
+
+  void cekSaldo(){
+    print("Saldo saat ini : $_saldo");
+  }
+
+}
+
+void main(){
+
+  RekeningBank rekening = RekeningBank("12345",500000);
+
+  rekening.deposit(200000);
+  rekening.tarik(100000);
+  rekening.cekSaldo();
+
+}
+</pre>
+
+</div>
+
+<div class="card">
+<h2>Bonus 3 - Soal 2</h2>
+
+<p>Membuat program simulasi transaksi sederhana menggunakan class RekeningBank.</p>
+
+<pre>
+class RekeningBank {
+
+  String _nomorRekening;
+  double _saldo;
+
+  RekeningBank(this._nomorRekening,this._saldo);
+
+  void deposit(double jumlah){
+    _saldo += jumlah;
+    print("Deposit berhasil");
+  }
+
+  void tarik(double jumlah){
+    if(jumlah <= _saldo){
+      _saldo -= jumlah;
+      print("Penarikan berhasil");
+    }else{
+      print("Saldo tidak mencukupi");
+    }
+  }
+
+  void cekSaldo(){
+    print("Saldo : $_saldo");
+  }
+
+}
+
+void main(){
+
+  RekeningBank akun = RekeningBank("001",1000000);
+
+  akun.deposit(500000);
+  akun.tarik(300000);
+  akun.cekSaldo();
+
+}
+</pre>
+
+</div>
+
+</div>
+
+<footer>
+2026 © Resume Materi OOP Dart
+</footer>
+
+</body>
+</html>
